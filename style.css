@@ -124,5 +124,12 @@
   border-left:3px solid var(--brand);border-radius:var(--r-sm);padding:18px 20px;margin:22px 0}
 .doc .callout p:last-child{margin-bottom:0}
 .doc table{margin:18px 0}
-.doc td:first-child{color:var(--text);font-weight:550;width:38%}
+.doc table{table-layout:auto}
+.doc td:first-child{color:var(--text);font-weight:550;white-space:nowrap}
+/* Three-column tables (what / why / where) need the prose columns to breathe;
+   pinning the first column at a percentage was written for two-column tables
+   and strangled the rest. */
+.doc table tr:has(td:nth-child(3)) td:first-child{white-space:normal;width:20%}
+.doc table tr:has(td:nth-child(3)) td:nth-child(2){width:26%}
+.doc th,.doc td{vertical-align:top}
 .doc a.back{display:inline-block;margin-bottom:26px;color:var(--text-3);font-size:.9rem}

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Okami Cam</title>
+<meta name="description" content="The Okami Cam privacy policy. Okami Cam sends your camera to your own computer on your own network, and to nobody else.">
+<link rel="icon" href="assets/mark.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="./"><img src="assets/logo.png" alt="Okami Cam"></a>
+    <span class="spacer"></span>
+    <a href="./">Home</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<div class="doc">
+  <a class="back" href="./">← Back to Okami Cam</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Applies to the Okami Cam Android app and the Okami Cam desktop app for Linux.<br>
+  Effective 29 July 2026 · Last updated 29 July 2026</p>
+
+  <div class="callout">
+    <p><strong>The short version.</strong> Okami Cam sends your camera from your phone to
+    your own computer, over your own local network. It has no servers. Nothing is sent to
+    the developer, nothing is sent to any third party, no account exists, there is no
+    analytics, no advertising and no crash reporting. Your video is never written to storage
+    by either app.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>Okami Cam is made by <strong>Julia Eileen Schäfer</strong>, an individual developer.
+  She is the entity named in the Google Play listing and the sole party responsible for this
+  software. There is no company, no team and no data processor acting on her behalf.</p>
+
+  <h2>2. What the app accesses, and where it goes</h2>
+  <p>The table covers everything either app touches. "Leaves the device" means leaves your
+  phone; in every case the only possible destination is a computer on your own network that
+  you have paired.</p>
+
+  <table>
+    <tr><th>What</th><th>Why</th><th>Where it goes</th></tr>
+    <tr>
+      <td>Camera video</td>
+      <td>It is the product — the video becomes a webcam on your computer</td>
+      <td>Encoded on the phone and streamed over your local Wi‑Fi to the paired computer.
+      Held in memory only, for as long as it takes to send. Never written to storage, never
+      sent to the internet, never seen by the developer.</td>
+    </tr>
+    <tr>
+      <td>Battery percentage</td>
+      <td>So the desktop can warn you before the phone dies mid‑call</td>
+      <td>A single number, sent to the paired computer every 30 seconds inside the same
+      stream. Nowhere else.</td>
+    </tr>
+    <tr>
+      <td>Phone model and manufacturer</td>
+      <td>So you can tell which phone is which in the desktop's device list</td>
+      <td>Broadcast on your local network as part of the standard mDNS service announcement,
+      alongside your phone's network address. See the note below.</td>
+    </tr>
+    <tr>
+      <td>Pairing code</td>
+      <td>So only a computer you approve can turn the camera on</td>
+      <td>Six digits generated on the phone and stored only on the phone. The desktop stores
+      a copy once you type it, in your user configuration directory.</td>
+    </tr>
+    <tr>
+      <td>Camera settings and profiles</td>
+      <td>So the app remembers your resolution, frame rate and orientation</td>
+      <td>Stored on your computer only.</td>
+    </tr>
+  </table>
+
+  <h3>What is NOT collected</h3>
+  <p>No name, email, account or identifier of any kind. No advertising ID, Android ID, IMEI,
+  serial number or MAC address. No location. No contacts. No microphone or audio. No photos
+  or files from your device. No analytics, telemetry or crash reporting. No third‑party SDK
+  of any kind is present in the app.</p>
+
+  <h2>3. Nothing is shared</h2>
+  <p>No data is transferred to any third party — no company, no organisation, no service
+  provider, no advertiser, no analytics vendor. There is no server to receive it. The only
+  destination any of your data reaches is a computer you own and have paired.</p>
+  <p>Neither app makes any connection to the internet. The Android app opens exactly one
+  network port on your local network and speaks only to the computer that connects to it.</p>
+
+  <h2>4. Security</h2>
+  <p><strong>Pairing.</strong> The phone shows a six‑digit code and refuses every connection
+  that does not present it, so a device on the same Wi‑Fi cannot turn your camera on. Codes
+  are generated with a cryptographically secure random number generator, compared in constant
+  time, and repeated wrong guesses lock further attempts out for increasing periods. You can
+  generate a new code at any time; doing so immediately disconnects whatever is connected,
+  which is how you revoke a computer's access.</p>
+  <p><strong>What this does not protect against.</strong> The video travels across your local
+  network without encryption. Someone who is already on your Wi‑Fi and able to capture network
+  traffic could reconstruct it. Use Okami Cam on a network you trust, and treat an untrusted
+  public Wi‑Fi as unsuitable. Encrypting the stream is planned.</p>
+  <p><strong>Your local network sees your phone.</strong> Device discovery works by
+  announcing the app on the local network, which is how the desktop finds your phone without
+  you typing an address. That announcement includes your phone's model, manufacturer and
+  network address, and any device on the same network can see it while the app is running.
+  This is inherent to how discovery works; closing the app stops the announcement.</p>
+  <p><strong>On your computer.</strong> The virtual camera appears at
+  <code>/dev/video10</code>, which by design any application on that machine with permission
+  to that device can read. That is what makes it usable as a webcam.</p>
+
+  <h2>5. Retention and deletion</h2>
+  <p>The developer retains nothing, because the developer receives nothing. There is no
+  database, no backup and no log on any server.</p>
+  <ul>
+    <li><strong>Video</strong> exists only in memory while it is being sent, and is gone the
+    moment the stream stops.</li>
+    <li><strong>On the phone</strong>, the only stored item is your pairing code. Uninstalling
+    the app deletes it. Automatic backup is disabled, so it is not copied to Google Drive or
+    transferred to a new device.</li>
+    <li><strong>On your computer</strong>, settings and saved pairing codes live in your user
+    configuration directory and are removed by deleting that directory.</li>
+  </ul>
+  <p>Because no personal data ever reaches the developer, there is no account to close and no
+  deletion request to make. Uninstalling both apps removes everything either of them stored.</p>
+
+  <h2>6. Permissions on Android, and why</h2>
+  <ul>
+    <li><strong>Camera</strong> — to capture the video. Without it the app has no function.</li>
+    <li><strong>Internet</strong> and <strong>network state</strong> — to open the local
+    connection your computer connects to, and to tell you when you are not on Wi‑Fi.</li>
+    <li><strong>Multicast</strong> — so your computer can discover the phone on the network.</li>
+    <li><strong>Notifications</strong> — the ongoing notification is how Android shows you the
+    camera is in use, and it carries the controls that stop it.</li>
+    <li><strong>Foreground service (camera, connected device)</strong> — so the stream keeps
+    running with the screen off, which is the normal way a webcam is used.</li>
+    <li><strong>Wake lock</strong> — so the phone does not suspend mid‑stream.</li>
+  </ul>
+
+  <h2>7. Children</h2>
+  <p>Okami Cam is a utility for connecting a phone to a computer and is not directed to
+  children. It collects no personal data from anyone, and therefore none from children.</p>
+
+  <h2>8. Distribution</h2>
+  <p>Installing the Linux app from the Okami Cam APT repository means your computer's package
+  manager periodically contacts GitHub Pages to check for updates, on whatever schedule your
+  system runs updates. GitHub can see your IP address in that request, as it can for any
+  software you download. That is your package manager, not the app: neither app makes any
+  network connection of its own beyond your local network.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If this policy changes, the date at the top changes with it, and the previous wording
+  remains in the public version history of the repository that hosts this page. A change that
+  materially affects what the apps do with your data will be called out in the release notes
+  of the version that introduces it.</p>
+
+  <h2 id="contact">10. Contact</h2>
+  <p>Questions about privacy, or about anything on this page:
+  <a href="mailto:julia_eileen@outlook.com">julia_eileen@outlook.com</a>.</p>
+  <p>You can also open an issue at
+  <a href="https://github.com/julia-eileen/okami-cam-releases/issues">the public issue
+  tracker</a>, though for privacy matters email is better.</p>
+</div>
+
+<footer>
+  <div class="wrap row">
+    <div><strong style="color:var(--text-2)">Okami Cam</strong> — © 2026 Julia Eileen Schäfer. All rights reserved.</div>
+    <div><a href="./">Home</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

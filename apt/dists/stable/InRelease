@@ -9,7 +9,7 @@ Version: 1.0
 Architectures: amd64
 Components: main
 Description: Okami Cam — Android phone as a Linux virtual webcam
-Date: Wed, 29 Jul 2026 15:08:24 UTC
+Date: Wed, 29 Jul 2026 16:49:17 UTC
 MD5Sum:
  d80b9b11534e65e7b3151ec0fd76dd03              801 main/binary-amd64/Packages
  d222eefce4272a037d2a9ff22520264e              540 main/binary-amd64/Packages.gz
@@ -21,18 +21,18 @@ SHA256:
  57da17bf33b412a6fad37a695ca7fcdcbfb2325f634b12d1794b90cfaaf4430c              540 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpqF2gWHHJlbGVhc2Vz
-QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9fr/EADXSL4kouwDbIZkxgjku/fzLHmK
-sEi/xGfXa3ht12yTt+jM/l9YmKJkfHvRZOFbU1xwQYGVGvRDWj6VEOpZoBII2LcQ
-Hhi68K2Qyf/50w6Zsy82y0b7kTi4x2aWVd0xuvqACSDQJbC/F7XqYewioTW4hnzn
-TwTtHRTGMn2/AgPjHB/YgzjcVw35mFIF1eK0TQH81R8FKwyic2m0+B6NTzA6DXDm
-VhjxoEpQSBNVuwZ853HFWBDxJ+IhO5ave7SK/qnq/g9JtCBNHOAnyBITwAA7e8DP
-TZKqmpkuyUk/4dT5fsdvBL78akLzHt6z0NPMAl5vFytPplstbmMP9b6unxaf7t6E
-gexSCizJ7WGM2hSd0eoOwR1aSXSEXWorSNCfloOjCKTki5blMKCjL+Ls25l27yhv
-JkKcKqYKAKQJjrTuAIVUaJMEZ+HFot2MeWwAg74b3K8spxRTD1Soz55KKj9btR3+
-/u0EwxfCseBMiu0DU4skrDCbQUcTTCgd4fz14oq/m6JXOjl8SH/89YHVSoj6rkUf
-1yME9AzWHfffaYN4T6oUL6h11q/WlMthlngN110k37gt+6J4hh7K3WosA9TWuY5/
-3KXvDMA6zbQnT0KDUJbBdOtHoEJnMg7ppGiXCLgpkQPG4Gv87A1bGisYiDFyKyvS
-84BxT0/OJBw10qAP+Q==
-=+tQD
+iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpqLw0WHHJlbGVhc2Vz
+QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9R4xEADNijusPsQfrotPnN/xZjI696GD
+nYpocmQ8p7Ai5DisF9eSU5cRER57+elQYTVP9L7cFRlFZ7Ftn3jdei+/pHwhF7Sv
+hjtaG9HHLi1ZS4lCOg5rARqrVG0lUqoJvG4AKXHPn136NfB8rTgDB45eMHxsGf4U
+I4tDCRtxp3yaIdX2x3u8pIT3G1mt8qjCh//qFtaTSPrsIhl9M96ba0V1KTifzBgf
+IYObzy25hAF2nafe7p5qdSOE4tJ9aAZOBnMsr140UljIgJbfByYPfeCOYd7sRsvY
+b6LkuPs0yNuTRhwHRqMDuM/aibWW3s3KLt3GVtcoK0A5w+FN2J2i7ATfIDK+yTps
+9vjKSSx8+gOKtYS9QOYsRUnF8XAobA6OlXeDXn9Kj6RuPOOwP4/7SUGe4vs5nBzp
+xA3QnU29Q3xp/VUezRVBgEY0zjlrrbrognIz08cLDNSEyO+ClltaYM7NrCXfBTjY
+0OQXXP6v4LdG0jop0SucqmdLT/D/okQ5z/Zoj9XPxlq6s/dZdgweXRkgmjwEKSTu
+VaVMEmycmxtKYFcrOUiDyHmQMdLm1W9MqwARx0gnXU5oyfiw33FkdCIvD+hAOHbq
+WxInwRIMY36FIZwM+7LuBK739nqsfNrnJrIwPTZBSpxBHjgk1XIIyosOx4AKNF/u
+2G1RiiTvDmZrwlipVw==
+=9CCc
 -----END PGP SIGNATURE-----

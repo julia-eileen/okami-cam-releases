@@ -82,6 +82,12 @@ repository, so there is nowhere else to file one.
 Useful things to include: your distribution and version, the output of
 `okami-cam doctor`, whether Secure Boot is on, and your phone model.
 
+## Privacy
+
+Okami Cam has no servers and collects nothing. Your camera goes from your phone to
+your own computer on your own network, and nowhere else. Full policy:
+[okami-cam privacy policy](https://julia-eileen.github.io/okami-cam-releases/privacy.html).
+
 ## License
 
 Okami Cam is **proprietary software**. © 2026 Julia Eileen Schäfer, all rights

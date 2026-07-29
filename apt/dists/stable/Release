@@ -6,7 +6,7 @@ Version: 1.0
 Architectures: amd64
 Components: main
 Description: Okami Cam — Android phone as a Linux virtual webcam
-Date: Wed, 29 Jul 2026 15:08:24 UTC
+Date: Wed, 29 Jul 2026 16:49:17 UTC
 MD5Sum:
  d80b9b11534e65e7b3151ec0fd76dd03              801 main/binary-amd64/Packages
  d222eefce4272a037d2a9ff22520264e              540 main/binary-amd64/Packages.gz
