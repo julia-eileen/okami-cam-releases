@@ -9,30 +9,30 @@ Version: 1.0
 Architectures: amd64
 Components: main
 Description: Okami Cam — Android phone as a Linux virtual webcam
-Date: Wed, 29 Jul 2026 16:49:17 UTC
+Date: Wed, 29 Jul 2026 18:19:41 UTC
 MD5Sum:
- d80b9b11534e65e7b3151ec0fd76dd03              801 main/binary-amd64/Packages
- d222eefce4272a037d2a9ff22520264e              540 main/binary-amd64/Packages.gz
+ 4cd67af08cf90727718b45fcc260052c              801 main/binary-amd64/Packages
+ b4e6d6d693da729dc4f2a1e5686332bd              539 main/binary-amd64/Packages.gz
 SHA1:
- 75967af66cccbfdb3744e7fe1e55ac5c691fad5b              801 main/binary-amd64/Packages
- 54325bf648b7457344defd901b7ac177c21b3bad              540 main/binary-amd64/Packages.gz
+ 441bef11d0d2ece2e309d9fc839555132d78ab66              801 main/binary-amd64/Packages
+ 284c0bf864b4d5c8508c4d2f236e83d94525c11d              539 main/binary-amd64/Packages.gz
 SHA256:
- c2e2beb0b4ec9c830dbd81d119e03fa36762dc1e7b444fd8df420f511c6c38ff              801 main/binary-amd64/Packages
- 57da17bf33b412a6fad37a695ca7fcdcbfb2325f634b12d1794b90cfaaf4430c              540 main/binary-amd64/Packages.gz
+ 98b4b05ce0aea4a330e40607a9d1f0d0e204a1e376b3db549450c0df221f94e0              801 main/binary-amd64/Packages
+ 081a8adba2b9a06f79c31a264790b30a521028f1fb94592a5e8a165663710720              539 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpqLw0WHHJlbGVhc2Vz
-QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9R4xEADNijusPsQfrotPnN/xZjI696GD
-nYpocmQ8p7Ai5DisF9eSU5cRER57+elQYTVP9L7cFRlFZ7Ftn3jdei+/pHwhF7Sv
-hjtaG9HHLi1ZS4lCOg5rARqrVG0lUqoJvG4AKXHPn136NfB8rTgDB45eMHxsGf4U
-I4tDCRtxp3yaIdX2x3u8pIT3G1mt8qjCh//qFtaTSPrsIhl9M96ba0V1KTifzBgf
-IYObzy25hAF2nafe7p5qdSOE4tJ9aAZOBnMsr140UljIgJbfByYPfeCOYd7sRsvY
-b6LkuPs0yNuTRhwHRqMDuM/aibWW3s3KLt3GVtcoK0A5w+FN2J2i7ATfIDK+yTps
-9vjKSSx8+gOKtYS9QOYsRUnF8XAobA6OlXeDXn9Kj6RuPOOwP4/7SUGe4vs5nBzp
-xA3QnU29Q3xp/VUezRVBgEY0zjlrrbrognIz08cLDNSEyO+ClltaYM7NrCXfBTjY
-0OQXXP6v4LdG0jop0SucqmdLT/D/okQ5z/Zoj9XPxlq6s/dZdgweXRkgmjwEKSTu
-VaVMEmycmxtKYFcrOUiDyHmQMdLm1W9MqwARx0gnXU5oyfiw33FkdCIvD+hAOHbq
-WxInwRIMY36FIZwM+7LuBK739nqsfNrnJrIwPTZBSpxBHjgk1XIIyosOx4AKNF/u
-2G1RiiTvDmZrwlipVw==
-=9CCc
+iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpqRD0WHHJlbGVhc2Vz
+QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9XdREADM/1z2U7NU+Lk1fq8eE7V0UkQ+
+5dyL6Uov1Hp0KGPBowgYJGHsp2P6Ps8If4JdsUl8MuA0c34aFz0Q6C5rsv+PncEs
+1yzuSpGMul6HElL6OeSkt65NdXfx5s0HhJvgkNUinrIxDSlv8gyNK1nrLpKNk4yO
+y3xqPzjlbIV/t558NdlXxA/AShh9EZ4Ppwf6/pL1kuyYwTOocs3lO8/RO0jVIPkG
+TonXBja4Dwv3excM0fyQUKGMPYTEzRzTBGHDklAGxPUy9hm9r+4IPocIZbWO9z6d
+JiZCAijTOgrsiD076GzFjidMgX9euxjjT0k1Uei+o0lybonJeQ9epzCR9dLy1sIJ
+tPLqcjsGGReCMVczVWbmNZORc8TJRS21va6YlXF3sIpQBO/KC3PtcZH8nfpmLX4b
+iKpdgFTUGTs+rI0YjY1V6QXxZKJYT8JsWffkf26gOdvPgMY5QcieV+jtsbW6Q3I1
+7xnWYaFEQQlBtcuZvj3WasAJCxpU//Vho1z11VRg9K/huI1xsMrsr9q8Z6GkJ4WJ
+Z6NmPwmsukyk6NNkXiuE5AGh8VRsBG8efuDhCOZzq0sH7lUWKvTXlTg9gR3inW3G
+4Co8XAd6Fylg3oIVO/2ZGHRriye8NzQxGkLsMBQ7WZ6JbdBHlWYBz+rNrU5RHwLe
+x72aYKPoJdl/dGhSmA==
+=snrh
 -----END PGP SIGNATURE-----
