@@ -1,0 +1,15 @@
+Package: okami-cam
+Version: 0.1.0
+Architecture: amd64
+Maintainer: okamicam
+Installed-Size: 13365
+Depends: ffmpeg, v4l2loopback-dkms, pkexec | policykit-1, libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: pool/main/o/okami-cam/okami-cam_0.1.0_amd64.deb
+Size: 4912194
+MD5sum: 604f5e9f122fa560360db6309c51cd6a
+SHA1: 15209f6bedddb8bb9c16afbf223b0df6cd8642b2
+SHA256: 53e95807de466e7a50ef8f80849c564a08a56f642915fcbbaca3f14e412d5bed
+Priority: optional
+Description: Android phone as a Linux virtual webcam
+ Okami Cam turns an Android phone into a native Linux virtual webcam over Wi-Fi. The phone streams H264 over the local network and the desktop app feeds it into a v4l2loopback device, so Discord, Teams, Meet, Zoom, OBS and any other V4L2 application see it as an ordinary camera.
+

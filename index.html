@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Okami Cam — your Android phone as a Linux webcam</title>
+<meta name="description" content="Turn an Android phone into a native Linux virtual webcam over Wi-Fi. Works with Discord, Teams, Meet, Zoom and OBS. The phone's screen can stay off.">
+<link rel="icon" href="assets/mark.png">
+<meta property="og:title" content="Okami Cam">
+<meta property="og:description" content="Your Android phone as a native Linux webcam, over Wi-Fi. The screen can stay off.">
+<meta property="og:image" content="assets/mark.png">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0a0a0c; --surface:#141418; --raised:#1c1c22;
+    --line:rgba(255,255,255,.07); --line-strong:rgba(255,255,255,.13);
+    --text:#f2f0ea; --text-2:#a1a1aa; --text-3:#71717a;
+    --brand:#e5342a; --brand-hi:#f04a3f; --brand-soft:rgba(229,52,42,.12);
+    --live:#22c55e; --warn:#f59e0b;
+    --r:14px; --r-sm:9px;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Cantarell,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:var(--brand-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ── header ── */
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
+    background:rgba(10,10,12,.78);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:16px;height:66px}
+  .nav img{height:36px;width:auto}
+  .nav .spacer{flex:1}
+  .nav a{color:var(--text-2);font-size:.92rem;font-weight:500}
+  .nav a:hover{color:var(--text);text-decoration:none}
+  @media(max-width:640px){.nav .hide-sm{display:none}}
+
+  /* ── hero ── */
+  .hero{position:relative;padding:88px 0 72px;text-align:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-40% 0 auto 50%;translate:-50% 0;
+    width:900px;height:620px;background:radial-gradient(closest-side,rgba(229,52,42,.16),transparent 70%);
+    pointer-events:none}
+  .hero > *{position:relative}
+  .hero img.mark{width:132px;height:132px;margin-bottom:26px;
+    filter:drop-shadow(0 14px 42px rgba(229,52,42,.28))}
+  h1{font-size:clamp(2.3rem,6vw,3.5rem);line-height:1.08;letter-spacing:-.025em;font-weight:800}
+  h1 .accent{color:var(--brand)}
+  .sub{margin:20px auto 0;max-width:620px;font-size:1.14rem;color:var(--text-2)}
+  .badges{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:26px}
+  .badge{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;
+    background:var(--surface);border:1px solid var(--line-strong);font-size:.84rem;color:var(--text-2)}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--live)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:var(--r-sm);
+    font-weight:650;font-size:1rem;transition:.18s;border:1px solid transparent}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-hi);text-decoration:none;transform:translateY(-1px)}
+  .btn-ghost{background:var(--surface);color:var(--text);border-color:var(--line-strong)}
+  .btn-ghost:hover{background:var(--raised);text-decoration:none}
+
+  /* ── sections ── */
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  h2{font-size:1.95rem;letter-spacing:-.02em;font-weight:750;margin-bottom:12px}
+  .lede{color:var(--text-2);max-width:660px;margin-bottom:38px}
+
+  /* ── the killer feature ── */
+  .spotlight{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:820px){.spotlight{grid-template-columns:1fr;gap:30px}}
+  .spotlight .card{background:linear-gradient(160deg,var(--brand-soft),transparent 62%);
+    border:1px solid rgba(229,52,42,.24);border-radius:var(--r);padding:30px}
+  .spotlight h3{font-size:1.28rem;margin-bottom:10px}
+  .spotlight p{color:var(--text-2)}
+  .phone-demo{display:flex;align-items:center;justify-content:center;gap:20px;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:34px 20px}
+  .screen{width:92px;height:176px;border-radius:14px;border:2px solid #2c2c34;background:#000;
+    display:flex;align-items:center;justify-content:center;color:var(--text-3);font-size:.7rem;
+    text-align:center;padding:8px;position:relative}
+  .screen.off{background:#050506}
+  .screen .live{position:absolute;bottom:10px;display:flex;align-items:center;gap:5px;
+    font-size:.62rem;color:var(--live)}
+  .arrow{color:var(--brand);font-size:1.5rem}
+
+  /* ── feature grid ── */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+  .feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+  .feat h3{font-size:1.03rem;margin-bottom:7px}
+  .feat p{color:var(--text-2);font-size:.93rem}
+  .feat .ico{font-size:1.4rem;margin-bottom:12px;display:block}
+
+  /* ── install ── */
+  .step{display:flex;gap:16px;margin-bottom:22px}
+  .num{flex:none;width:29px;height:29px;border-radius:50%;background:var(--brand-soft);
+    border:1px solid rgba(229,52,42,.35);color:var(--brand-hi);display:flex;align-items:center;
+    justify-content:center;font-size:.85rem;font-weight:700}
+  .step-body{flex:1;min-width:0}
+  .step h3{font-size:1.02rem;margin-bottom:8px}
+  pre{background:#0e0e12;border:1px solid var(--line-strong);border-radius:var(--r-sm);
+    padding:15px 17px;overflow-x:auto;font-family:var(--mono);font-size:.855rem;line-height:1.65;
+    color:#dcdce2;position:relative}
+  pre .c{color:var(--text-3)}
+  pre .k{color:var(--brand-hi)}
+  .note{display:flex;gap:12px;background:var(--surface);border:1px solid var(--line);
+    border-left:3px solid var(--warn);border-radius:var(--r-sm);padding:15px 17px;margin-top:12px}
+  .note strong{color:var(--warn)}
+  .note p{color:var(--text-2);font-size:.92rem}
+
+  /* ── shot ── */
+  .shot{border:1px solid var(--line-strong);border-radius:var(--r);overflow:hidden;
+    box-shadow:0 28px 70px rgba(0,0,0,.55);max-width:100%;display:block;margin-top:8px}
+
+  /* ── req table ── */
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+  th{color:var(--text-3);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+  td code{font-family:var(--mono);font-size:.86rem;color:var(--brand-hi)}
+
+  footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--text-3);font-size:.89rem}
+  footer .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img src="assets/logo.png" alt="Okami Cam">
+    <span class="spacer"></span>
+    <a href="#install">Install</a>
+    <a href="#how" class="hide-sm">How it works</a>
+    <a href="#requirements" class="hide-sm">Requirements</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <img class="mark" src="assets/mark.png" alt="">
+    <h1>Your Android phone,<br>a real <span class="accent">Linux webcam</span></h1>
+    <p class="sub">
+      Okami Cam streams your phone's camera over Wi‑Fi into a virtual V4L2 device.
+      Discord, Teams, Meet, Zoom and OBS just see a camera. No cable, no browser tab, no cloud.
+    </p>
+    <div class="badges">
+      <span class="badge"><span class="dot"></span> Screen can stay off</span>
+      <span class="badge">Wi‑Fi, no USB cable</span>
+      <span class="badge">Nothing leaves your network</span>
+      <span class="badge">1080p&nbsp;·&nbsp;30&nbsp;fps</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#install">Install for Linux</a>
+      <a class="btn btn-ghost" href="https://github.com/julia-eileen/okami-cam-releases/releases/latest">Download .deb</a>
+    </div>
+  </div>
+</div>
+
+<section id="why">
+  <div class="wrap">
+    <h2>The screen can be off</h2>
+    <p class="lede">
+      A webcam sits on a stand for an hour with its screen dark. Most phone‑webcam apps
+      die the moment the display sleeps, because the camera is tied to the visible activity.
+      Okami Cam binds the camera to the streaming session instead, claims a camera foreground
+      service, and holds the CPU and the Wi‑Fi radio awake for the duration of the call.
+    </p>
+    <div class="spotlight">
+      <div class="card">
+        <h3>Put it down and forget it</h3>
+        <p>
+          Set the phone on a stand, press the power button, and keep talking. The stream
+          keeps flowing. When the desktop disconnects, the phone releases the camera and
+          its locks on its own — no drained battery because you forgot to stop it.
+        </p>
+      </div>
+      <div class="phone-demo">
+        <div class="screen off">
+          <span style="opacity:.35">screen off</span>
+          <span class="live"><span class="dot"></span> streaming</span>
+        </div>
+        <span class="arrow">→</span>
+        <div class="screen" style="width:150px;height:100px">
+          <span>/dev/video10<br><span style="color:var(--live)">● live in Discord</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">
+      The phone encodes H.264 with the hardware encoder and streams it over TCP. The desktop
+      finds it with mDNS — no IP addresses to type — and tees the video into a v4l2loopback
+      device and into the app's own preview, so what you see is exactly what the call sees.
+    </p>
+    <div class="grid">
+      <div class="feat"><span class="ico">📡</span><h3>Finds itself</h3>
+        <p>mDNS discovery on the local network. Open both apps and the phone is simply there.</p></div>
+      <div class="feat"><span class="ico">🎥</span><h3>A real V4L2 device</h3>
+        <p>Not a browser hack. Any Linux app that can open a webcam can open this one.</p></div>
+      <div class="feat"><span class="ico">🔒</span><h3>Stays on your network</h3>
+        <p>Video goes phone → your computer. No account, no server, no cloud in the path.</p></div>
+      <div class="feat"><span class="ico">🔄</span><h3>Rotate and mirror</h3>
+        <p>Applied to the virtual camera and the preview together, so they never disagree.</p></div>
+      <div class="feat"><span class="ico">🔋</span><h3>Battery on screen</h3>
+        <p>The phone reports its charge inside the stream, shown in the desktop app.</p></div>
+      <div class="feat"><span class="ico">🛡️</span><h3>No sudo</h3>
+        <p>Loading the kernel module goes through Polkit, with a closed set of operations.</p></div>
+    </div>
+    <img class="shot" src="assets/screenshot.png" alt="The Okami Cam desktop app" style="margin-top:34px">
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <h2>Install on Linux</h2>
+    <p class="lede">
+      Debian and Ubuntu. Adding the repository means <code>apt upgrade</code> keeps Okami Cam
+      up to date from then on — packages are GPG‑signed and verified by apt.
+    </p>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="step-body">
+        <h3>Add the signing key and the repository</h3>
+<pre><span class="c"># Trust the release signing key</span>
+curl -fsSL https://julia-eileen.github.io/okami-cam-releases/okami-cam.gpg \
+  | sudo tee /usr/share/keyrings/okami-cam.gpg &gt; /dev/null
+
+<span class="c"># Point apt at the repository</span>
+echo <span class="k">"deb [signed-by=/usr/share/keyrings/okami-cam.gpg] \
+https://julia-eileen.github.io/okami-cam-releases/apt stable main"</span> \
+  | sudo tee /etc/apt/sources.list.d/okami-cam.list</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="step-body">
+        <h3>Install</h3>
+<pre>sudo apt update
+sudo apt install okami-cam</pre>
+        <p style="color:var(--text-2);font-size:.92rem;margin-top:10px">
+          This pulls in <code>ffmpeg</code> and builds the <code>v4l2loopback</code> kernel
+          module through DKMS.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="step-body">
+        <h3>Install the phone app and open both</h3>
+        <p style="color:var(--text-2)">
+          Grab the Android app, put the phone on the same Wi‑Fi, and open Okami Cam on both
+          ends. The phone appears in the desktop list within a few seconds. Pick a camera,
+          hit Start, then select <strong>Okami Cam</strong> as your webcam in Discord, Teams
+          or Meet.
+        </p>
+      </div>
+    </div>
+
+    <div class="note">
+      <div>
+        <p><strong>Secure Boot:</strong> if your machine has Secure Boot enabled, the
+        <code>v4l2loopback</code> module has to be signed with a key your firmware trusts, or the
+        kernel will refuse to load it. Okami Cam detects this and explains what to do — it will
+        never disable Secure Boot or ask for your MOK password. Enrolling a MOK key is a
+        one‑time step you perform yourself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="requirements">
+  <div class="wrap">
+    <h2>Requirements</h2>
+    <table>
+      <tr><th>Desktop</th><th>Phone</th></tr>
+      <tr>
+        <td>Linux with <code>v4l2loopback</code> and <code>ffmpeg 8+</code></td>
+        <td>Android 7.0 or newer</td>
+      </tr>
+      <tr>
+        <td>Polkit (<code>pkexec</code>) for loading the module</td>
+        <td>Camera permission</td>
+      </tr>
+      <tr>
+        <td>x86‑64 · Debian / Ubuntu package</td>
+        <td>Both devices on the same Wi‑Fi network</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>
+      <strong style="color:var(--text-2)">Okami Cam</strong> — © 2026 Julia Eileen Schäfer.
+      All rights reserved.<br>
+      Proprietary software. Use requires permission and credit.
+    </div>
+    <div><a href="https://github.com/julia-eileen/okami-cam-releases/releases">Releases</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Okami Cam
+Label: Okami Cam
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64
+Components: main
+Description: Okami Cam — Android phone as a Linux virtual webcam
+Date: Wed, 29 Jul 2026 03:51:05 UTC
+MD5Sum:
+ d80b9b11534e65e7b3151ec0fd76dd03              801 main/binary-amd64/Packages
+ d222eefce4272a037d2a9ff22520264e              540 main/binary-amd64/Packages.gz
+SHA1:
+ 75967af66cccbfdb3744e7fe1e55ac5c691fad5b              801 main/binary-amd64/Packages
+ 54325bf648b7457344defd901b7ac177c21b3bad              540 main/binary-amd64/Packages.gz
+SHA256:
+ c2e2beb0b4ec9c830dbd81d119e03fa36762dc1e7b444fd8df420f511c6c38ff              801 main/binary-amd64/Packages
+ 57da17bf33b412a6fad37a695ca7fcdcbfb2325f634b12d1794b90cfaaf4430c              540 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmppeKoWHHJlbGVhc2Vz
+QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9Q5fD/4j3XNUdpy7nfzZ1FUYZIqqGBXy
+0xQM7nHGkYwmbo0+l14850uIxE3XV2zNK/Saf/tHCV0LjqQSfeoqw+j33QGBYhNx
+DCP9+ZUu3sbQw+2n9X5UoC2oXb745ysDm1b5NjXEsiLxTtzh8//u6ZmgpEvQi92Y
+JtDe2PmkW7BJ2VYLXa5n/HO3rxmiC8PwpywxX6LY5hrDlzUt0NkZ9am94yNCfQbp
+AT9MGr17PCrQ7lAKyWfMRfPQFLA6jFhC5jUDNJwm9ZIrkkDCQhqjB98BgByhcb48
+X2I03dYpVZ/mbDsLqnPsisWwgiOvgjm4Ena21TTt+aet/noqim31x1pdG9/LP2Pc
+oVnmfQu754OaVVHaduJMjj+LFn+emymMKS7fGOkfwhlOxVbfqzLXNZL064krPmOp
+g6EnAv/ciC1FHzMBxlTesJ20sjrX9H6iKTfbrsBvAvG0aCZAl9nsnDa8f0hAx8Tk
+VRiEY9z+arJBNp80gmP6IGkqapFZovCZ3lRekjnShcAuLkiyQ/Cyt1o5ejulqPZg
+7VryZcjiani1EsZIJjyU4p0Kp7gIClA6F0ubfRAXVijCtkZIMCaCzibWnK3vN6/E
+hsmmeYawI89DHxNmxo6v4r/NrHjJLtoEbSIg6TZ/vlXJ00Y7Rc6pviuTIX9BDV12
+azr3KA4kkfxluZDY1Q==
+=ZnYb
+-----END PGP SIGNATURE-----
