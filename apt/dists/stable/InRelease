@@ -9,30 +9,30 @@ Version: 1.0
 Architectures: amd64
 Components: main
 Description: Okami Cam — Android phone as a Linux virtual webcam
-Date: Wed, 29 Jul 2026 18:19:41 UTC
+Date: Thu, 30 Jul 2026 23:06:39 UTC
 MD5Sum:
- 4cd67af08cf90727718b45fcc260052c              801 main/binary-amd64/Packages
- b4e6d6d693da729dc4f2a1e5686332bd              539 main/binary-amd64/Packages.gz
+ 8fc45b7ec8897dd8cd173543371cc00f              801 main/binary-amd64/Packages
+ 610db3e5336124a7af8552c7b28acfbb              542 main/binary-amd64/Packages.gz
 SHA1:
- 441bef11d0d2ece2e309d9fc839555132d78ab66              801 main/binary-amd64/Packages
- 284c0bf864b4d5c8508c4d2f236e83d94525c11d              539 main/binary-amd64/Packages.gz
+ 403346c69c041e2b1cd65985e4f0aed83849d7e3              801 main/binary-amd64/Packages
+ a00a26477a906d1ee521d7c0d1d46eba8f005ebc              542 main/binary-amd64/Packages.gz
 SHA256:
- 98b4b05ce0aea4a330e40607a9d1f0d0e204a1e376b3db549450c0df221f94e0              801 main/binary-amd64/Packages
- 081a8adba2b9a06f79c31a264790b30a521028f1fb94592a5e8a165663710720              539 main/binary-amd64/Packages.gz
+ a5dfead998b6e7cee5b974d7c329da4a5d3d07fd710d0f0927a5633e086cc38f              801 main/binary-amd64/Packages
+ b6702c9186794bfbbe95803e675cbb9197bd07080b29488dfcafba148d3309fa              542 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpqRD0WHHJlbGVhc2Vz
-QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9XdREADM/1z2U7NU+Lk1fq8eE7V0UkQ+
-5dyL6Uov1Hp0KGPBowgYJGHsp2P6Ps8If4JdsUl8MuA0c34aFz0Q6C5rsv+PncEs
-1yzuSpGMul6HElL6OeSkt65NdXfx5s0HhJvgkNUinrIxDSlv8gyNK1nrLpKNk4yO
-y3xqPzjlbIV/t558NdlXxA/AShh9EZ4Ppwf6/pL1kuyYwTOocs3lO8/RO0jVIPkG
-TonXBja4Dwv3excM0fyQUKGMPYTEzRzTBGHDklAGxPUy9hm9r+4IPocIZbWO9z6d
-JiZCAijTOgrsiD076GzFjidMgX9euxjjT0k1Uei+o0lybonJeQ9epzCR9dLy1sIJ
-tPLqcjsGGReCMVczVWbmNZORc8TJRS21va6YlXF3sIpQBO/KC3PtcZH8nfpmLX4b
-iKpdgFTUGTs+rI0YjY1V6QXxZKJYT8JsWffkf26gOdvPgMY5QcieV+jtsbW6Q3I1
-7xnWYaFEQQlBtcuZvj3WasAJCxpU//Vho1z11VRg9K/huI1xsMrsr9q8Z6GkJ4WJ
-Z6NmPwmsukyk6NNkXiuE5AGh8VRsBG8efuDhCOZzq0sH7lUWKvTXlTg9gR3inW3G
-4Co8XAd6Fylg3oIVO/2ZGHRriye8NzQxGkLsMBQ7WZ6JbdBHlWYBz+rNrU5RHwLe
-x72aYKPoJdl/dGhSmA==
-=snrh
+iQJKBAEBCgA0FiEEP2Urgib8hurmm9kgAAsaEmsdiPUFAmpr2P8WHHJlbGVhc2Vz
+QG9rYW1pY2FtLmRldgAKCRAACxoSax2I9QLGD/43E8INTsGM955Qcv1VpGk6aiz1
+nnaM4hOaTq/b521fFuuv+OLcPD9K5tHDzHwRfhmx/gZ7d5uUeETRuYOADKf7AACu
+aWhATtNd/bX9/pnTL033KN/6VJ22gn5728Qh560PtFI0CDNGHZWCyrBhw86O9kBn
+p5+ebUOUsMO4Y/xlAYJ/6UaWS0DOOz1x/+EBri6TU9cDSvN6DLU79/EACx6f1/6m
+j5K+cj4ZVZr8D84nFFWVAK/reCUZ2cCM6Q1lMf2S1CZehBi7EwOkqQVEaS9hu1Tl
+0SypROYYeefQjIKJTMdQLeuiM+0cRIrtNPftJ7ThP1u4g0+ni6VhP3P1yfae+Vgq
+WC3p16YuihKgB2wNxDimQfL4GAhS3sFMgu1d4BZbM8Y0GsdLtZLU0IecpFtOS3F7
++lVntxD3i0atospyaizAZqIvVYgczYuyyUq3/205dnJvs/5c4ge2AedBwUUI3ef8
+zfgEQJ+FBjPyN41lw9QpWTcV1+gL8LKqV9gbvq7FjGUpzDH2p1/bMGj6GOVMvsAW
+/Stcbjtw8+EsWLBq33/B8kLuRkFe5TO2gB38hesvQpPMLOwO+oOkA/euwMeGES1T
+jRiAt7kgroi3XPErJ1uCIC/NmkkbecKACoRqupr/lKwHgLt1EmLLUswlbhxsIWg6
+lPJZ/LLApV7c6Hdytw==
+=51IH
 -----END PGP SIGNATURE-----

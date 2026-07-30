@@ -6,13 +6,13 @@ Version: 1.0
 Architectures: amd64
 Components: main
 Description: Okami Cam — Android phone as a Linux virtual webcam
-Date: Wed, 29 Jul 2026 18:19:41 UTC
+Date: Thu, 30 Jul 2026 23:06:39 UTC
 MD5Sum:
- 4cd67af08cf90727718b45fcc260052c              801 main/binary-amd64/Packages
- b4e6d6d693da729dc4f2a1e5686332bd              539 main/binary-amd64/Packages.gz
+ 8fc45b7ec8897dd8cd173543371cc00f              801 main/binary-amd64/Packages
+ 610db3e5336124a7af8552c7b28acfbb              542 main/binary-amd64/Packages.gz
 SHA1:
- 441bef11d0d2ece2e309d9fc839555132d78ab66              801 main/binary-amd64/Packages
- 284c0bf864b4d5c8508c4d2f236e83d94525c11d              539 main/binary-amd64/Packages.gz
+ 403346c69c041e2b1cd65985e4f0aed83849d7e3              801 main/binary-amd64/Packages
+ a00a26477a906d1ee521d7c0d1d46eba8f005ebc              542 main/binary-amd64/Packages.gz
 SHA256:
- 98b4b05ce0aea4a330e40607a9d1f0d0e204a1e376b3db549450c0df221f94e0              801 main/binary-amd64/Packages
- 081a8adba2b9a06f79c31a264790b30a521028f1fb94592a5e8a165663710720              539 main/binary-amd64/Packages.gz
+ a5dfead998b6e7cee5b974d7c329da4a5d3d07fd710d0f0927a5633e086cc38f              801 main/binary-amd64/Packages
+ b6702c9186794bfbbe95803e675cbb9197bd07080b29488dfcafba148d3309fa              542 main/binary-amd64/Packages.gz
