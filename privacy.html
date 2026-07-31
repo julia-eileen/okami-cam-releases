@@ -24,7 +24,7 @@
 
   <h1>Privacy Policy</h1>
   <p class="meta">Applies to the Okami Cam Android app and the Okami Cam desktop app for Linux.<br>
-  Effective 29 July 2026 · Last updated 29 July 2026</p>
+  Effective 29 July 2026 · Last updated 30 July 2026</p>
 
   <div class="callout">
     <p><strong>The short version.</strong> Okami Cam sends your camera from your phone to
@@ -72,6 +72,12 @@
       a copy once you type it, in your user configuration directory.</td>
     </tr>
     <tr>
+      <td>Name of the computer that paired</td>
+      <td>So you can tell whose computer used your camera, and when</td>
+      <td>Sent by that computer during pairing, stored on the phone and shown on the app
+      screen. Never sent anywhere.</td>
+    </tr>
+    <tr>
       <td>Camera settings and profiles</td>
       <td>So the app remembers your resolution, frame rate and orientation</td>
       <td>Stored on your computer only.</td>
@@ -81,8 +87,10 @@
   <h3>What is NOT collected</h3>
   <p>No name, email, account or identifier of any kind. No advertising ID, Android ID, IMEI,
   serial number or MAC address. No location. No contacts. No microphone or audio. No photos
-  or files from your device. No analytics, telemetry or crash reporting. No third‑party SDK
-  of any kind is present in the app.</p>
+  or files from your device. No analytics, telemetry or crash reporting. No advertising,
+  attribution or crash‑reporting SDK is present. The only libraries the app bundles are
+  Google's AndroidX, CameraX and Material components, none of which send anything off the
+  device.</p>
 
   <h2>3. Nothing is shared</h2>
   <p>No data is transferred to any third party — no company, no organisation, no service
@@ -109,7 +117,10 @@
   This is inherent to how discovery works; closing the app stops the announcement.</p>
   <p><strong>On your computer.</strong> The virtual camera appears at
   <code>/dev/video10</code>, which by design any application on that machine with permission
-  to that device can read. That is what makes it usable as a webcam.</p>
+  to that device can read. That is what makes it usable as a webcam. While a stream is
+  running the desktop app also serves the live picture to its own window over a
+  loopback‑only address that nothing outside your computer can reach, protected by a random
+  token generated for that session, and that server stops when the stream stops.</p>
 
   <h2>5. Retention and deletion</h2>
   <p>The developer retains nothing, because the developer receives nothing. There is no
@@ -117,11 +128,13 @@
   <ul>
     <li><strong>Video</strong> exists only in memory while it is being sent, and is gone the
     moment the stream stops.</li>
-    <li><strong>On the phone</strong>, the only stored item is your pairing code. Uninstalling
-    the app deletes it. Automatic backup is disabled, so it is not copied to Google Drive or
-    transferred to a new device.</li>
+    <li><strong>On the phone</strong>, the only stored items are your pairing code and the
+    name of the last computer that paired, with the time it did. Uninstalling the app deletes
+    them. Automatic backup is disabled, so they are not copied to Google Drive or transferred
+    to a new device.</li>
     <li><strong>On your computer</strong>, settings and saved pairing codes live in your user
-    configuration directory and are removed by deleting that directory.</li>
+    configuration directory and are removed by deleting that directory. Each saved code is
+    stored next to the name of the phone it belongs to.</li>
   </ul>
   <p>Because no personal data ever reaches the developer, there is no account to close and no
   deletion request to make. Uninstalling both apps removes everything either of them stored.</p>
